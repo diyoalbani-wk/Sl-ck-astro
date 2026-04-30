@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-15px); }
+}
+
+.animate-float-slow {
+animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+animation: float 3s ease-in-out infinite;
+animation-delay: 1s; 
+}
+
+.reveal {
+opacity: 0;
+transition: all 0.8s ease-out;
+}
+
+.reveal-left {
+transform: translateX(-50px) translateY(20px);
+}
+
+.reveal-right {
+transform: translateX(50px) translateY(20px);
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateX(0) translateY(0);
+}
